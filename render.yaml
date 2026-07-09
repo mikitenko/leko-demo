@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: leko-demo
+    runtime: node
+    buildCommand: bash render-build.sh
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: leko-demo-secret-key-2024
+      - key: PORT
+        value: "3000"

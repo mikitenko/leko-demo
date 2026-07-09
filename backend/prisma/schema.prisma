@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id              Int       @id @default(autoincrement())
+  referenceNumber String    @unique
+  category        String
+  brand           String
+  model           String
+  year            Int?
+  hours           Int?
+  condition       Condition @default(USED)
+  price           Float?
+  priceOnRequest  Boolean   @default(false)
+  inYard          Boolean   @default(true)
+  location        String?
+  highlights      String?
+  active          Boolean   @default(true)
+  featured        Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  translations    ProductTranslation[]
+  photos          ProductPhoto[]
+}
+
+model ProductTranslation {
+  id          Int     @id @default(autoincrement())
+  productId   Int
+  locale      String  // en, de, uk, ru, es, fr, pl, it
+  title       String
+  description String?
+
+  product     Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, locale])
+}
+
+model ProductPhoto {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  filename  String  @default("")
+  url       String?
+  isPrimary Boolean @default(false)
+  order     Int     @default(0)
+
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum Condition {
+  NEW
+  USED
+}
