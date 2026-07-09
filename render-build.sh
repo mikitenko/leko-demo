@@ -2,8 +2,8 @@
 # Build frontend and copy to backend/public
 
 cd frontend
-npm install
-npm run build
+npm install --include=dev
+npx vite build
 cd ..
 
 cd backend
