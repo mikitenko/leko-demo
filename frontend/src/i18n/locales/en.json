@@ -126,5 +126,11 @@
     "rights": "All rights reserved",
     "company": "Leko GmbH",
     "location": "Trier, Germany"
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.",
+    "accept": "Accept",
+    "reject": "Decline",
+    "learnMore": "Learn more"
   }
 }
