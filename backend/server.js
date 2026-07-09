@@ -103,7 +103,9 @@ app.get('/api/products', (req, res) => {
       p.brand.toLowerCase().includes(s) ||
       p.model.toLowerCase().includes(s) ||
       p.referenceNumber.toLowerCase().includes(s) ||
-      p.translations.some(t => t.title.toLowerCase().includes(s))
+      (p.highlights || '').toLowerCase().includes(s) ||
+      (p.category || '').toLowerCase().includes(s) ||
+      p.translations.some(t => t.title.toLowerCase().includes(s) || (t.description || '').toLowerCase().includes(s))
     );
   }
 

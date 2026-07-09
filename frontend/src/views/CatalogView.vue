@@ -18,6 +18,12 @@
       </select>
     </div>
 
+    <!-- Active search -->
+    <div v-if="route.query.search" class="mb-4 flex items-center gap-2">
+      <span class="text-sm text-gray-600">{{ t('catalog.searchFor') || 'Search' }}: <strong>«{{ route.query.search }}»</strong></span>
+      <button @click="clearSearch" class="text-xs text-red-500 hover:text-red-700 font-medium border border-red-200 rounded px-2 py-0.5">✕ {{ t('catalog.reset') }}</button>
+    </div>
+
     <div class="flex gap-6">
 
       <!-- Filters sidebar desktop -->
@@ -95,7 +101,7 @@
 
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useProductsStore } from '@/stores/products';
 import ProductCard from '@/components/ProductCard.vue';
@@ -103,6 +109,7 @@ import FilterPanel from '@/components/FilterPanel.vue';
 
 const { t, locale } = useI18n();
 const route = useRoute();
+const router = useRouter();
 const store = useProductsStore();
 
 const sortBy = ref('featured');
@@ -162,6 +169,12 @@ function onFiltersReset() {
   fetchData();
 }
 
+function clearSearch() {
+  const query = { ...route.query };
+  delete query.search;
+  router.replace({ query });
+}
+
 function goToPage(p) {
   currentPage.value = p;
   fetchData();
@@ -169,11 +182,16 @@ function goToPage(p) {
 }
 
 watch(() => route.params.category, () => { currentPage.value = 1; fetchData(); });
-watch(() => route.query.category, (cat) => {
-  activeFilters.value = { ...defaultFilters(), categories: cat ? [cat] : [] };
+watch(() => route.query, (newQuery) => {
+  const cat = newQuery.category;
+  if (cat) {
+    activeFilters.value = { ...defaultFilters(), categories: [cat] };
+  } else if (!newQuery.search) {
+    activeFilters.value = defaultFilters();
+  }
   currentPage.value = 1;
   fetchData();
-});
+}, { deep: true });
 watch(locale, () => fetchData());
 
 onMounted(async () => {
