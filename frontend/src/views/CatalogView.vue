@@ -115,6 +115,7 @@ const store = useProductsStore();
 const sortBy = ref('featured');
 const currentPage = ref(1);
 const mobileFilters = ref(false);
+const skipNextQueryWatch = ref(false);
 
 const defaultFilters = () => ({
   categories: [], brands: [], conditions: [],
@@ -132,12 +133,16 @@ const categoryTitle = computed(() => {
   return cats.map(c => t(`categories.${c}`, c)).join(', ');
 });
 
+const ignoreRouteCategory = ref(false);
+
 function buildParams() {
   const f = activeFilters.value;
   const params = { locale: locale.value, sortBy: sortBy.value, page: currentPage.value, limit: 12 };
 
-  const routeCategory = route.query.category || route.params.category;
-  if (routeCategory && !f.categories.length) params.category = routeCategory;
+  if (!ignoreRouteCategory.value) {
+    const routeCategory = route.query.category || route.params.category;
+    if (routeCategory && !f.categories.length) params.category = routeCategory;
+  }
   if (route.query.search) params.search = route.query.search;
   if (f.categories.length) params.category = f.categories.join(',');
   if (f.brands.length) params.brand = f.brands.join(',');
@@ -160,6 +165,17 @@ async function fetchData() {
 function onFiltersUpdate(filters) {
   activeFilters.value = filters;
   currentPage.value = 1;
+  ignoreRouteCategory.value = true;
+  // Clean URL category param since user is now using checkboxes
+  if (route.params.category) {
+    skipNextQueryWatch.value = true;
+    router.replace({ name: 'catalog', query: route.query.search ? { search: route.query.search } : {} });
+  } else if (route.query.category) {
+    skipNextQueryWatch.value = true;
+    const query = { ...route.query };
+    delete query.category;
+    router.replace({ query });
+  }
   fetchData();
 }
 
@@ -183,11 +199,13 @@ function goToPage(p) {
 
 watch(() => route.params.category, () => { currentPage.value = 1; fetchData(); });
 watch(() => route.query, (newQuery) => {
+  if (skipNextQueryWatch.value) {
+    skipNextQueryWatch.value = false;
+    return;
+  }
   const cat = newQuery.category;
   if (cat) {
     activeFilters.value = { ...defaultFilters(), categories: [cat] };
-  } else if (!newQuery.search) {
-    activeFilters.value = defaultFilters();
   }
   currentPage.value = 1;
   fetchData();
