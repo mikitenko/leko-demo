@@ -9,7 +9,7 @@
     "searchPlaceholder": "Search machinery...",
     "completeStock": "Complete Stock",
     "browseByCategory": "Browse by category",
-    "heroSubtitle": "Heavy Machinery Dealer — Trier, Germany",
+    "heroSubtitle": "Heavy Machinery Dealer — Demo, Locatioon",
     "heroDesc": "Used & new construction and agricultural machinery. Excavators, dozers, cranes, tractors and more.",
     "search": "Search",
     "statsMachines": "Machines in stock",
@@ -125,7 +125,7 @@
   "footer": {
     "rights": "All rights reserved",
     "company": "Leko demo",
-    "location": "Trier, Germany"
+    "location": "Demo, Locatioon"
   },
   "cookies": {
     "message": "We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.",

@@ -61,7 +61,7 @@
           </div>
           <div>
             <label class="label">Location</label>
-            <input v-model="form.location" type="text" class="input" placeholder="Trier, Germany" />
+            <input v-model="form.location" type="text" class="input" placeholder="Demo, Locatioon" />
           </div>
           <div>
             <label class="label">Price (€)</label>
@@ -239,7 +239,7 @@ const form = ref({
   price: '',
   priceOnRequest: true,
   inYard: true,
-  location: 'Trier, Germany',
+  location: 'Demo, Locatioon',
   highlights: '',
   featured: false,
   active: true,

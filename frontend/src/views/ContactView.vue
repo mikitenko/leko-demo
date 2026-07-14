@@ -34,7 +34,7 @@
       <div class="space-y-6">
         <div>
           <h3 class="font-bold text-gray-900 mb-2">{{ t('contact.address') }}</h3>
-          <p class="text-gray-600">Leko demo<br>Musterstraße 1<br>54290 Trier<br>Germany</p>
+          <p class="text-gray-600">Leko demo<br>Musterstraße 1<br>54290 Demo<br>Locatioon</p>
         </div>
         <div>
           <h3 class="font-bold text-gray-900 mb-2">{{ t('contact.workingHours') }}</h3>
@@ -51,7 +51,7 @@
 
         <!-- Map placeholder -->
         <div class="bg-gray-100 rounded h-48 flex items-center justify-center text-gray-400">
-          <span class="text-sm">Trier, Germany 📍</span>
+          <span class="text-sm">Demo, Locatioon 📍</span>
         </div>
       </div>
     </div>

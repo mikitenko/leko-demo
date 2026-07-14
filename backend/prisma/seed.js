@@ -30,7 +30,7 @@ async function main() {
       price: null,
       priceOnRequest: true,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'VG UNDERCARRIAGE - CE/EPA',
       featured: true,
       translations: [
@@ -50,7 +50,7 @@ async function main() {
       price: 185000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'LOW HOURS - FULL SERVICE HISTORY',
       featured: true,
       translations: [
@@ -70,7 +70,7 @@ async function main() {
       price: 220000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'RIPPER ATTACHED - GOOD UNDERCARRIAGE',
       featured: true,
       translations: [
@@ -90,7 +90,7 @@ async function main() {
       price: 145000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'EXCELLENT CONDITION - NEW TYRES',
       featured: false,
       translations: [
@@ -110,7 +110,7 @@ async function main() {
       price: null,
       priceOnRequest: true,
       inYard: false,
-      location: 'Hamburg, Germany',
+      location: 'Hamburg, Locatioon',
       highlights: '100T CAPACITY - FULL DOCUMENTATION',
       featured: true,
       translations: [
@@ -130,7 +130,7 @@ async function main() {
       price: 310000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'GPS READY - POWERSHIFT',
       featured: false,
       translations: [
@@ -150,7 +150,7 @@ async function main() {
       price: 580000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'ALMOST NEW - FULL WARRANTY',
       featured: true,
       translations: [
@@ -170,7 +170,7 @@ async function main() {
       price: 195000,
       priceOnRequest: false,
       inYard: true,
-      location: 'Trier, Germany',
+      location: 'Demo, Locatioon',
       highlights: 'GOOD CONDITION - READY TO WORK',
       featured: false,
       translations: [

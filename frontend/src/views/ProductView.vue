@@ -86,7 +86,7 @@
               </div>
 
               <div class="px-4 py-3 bg-gray-50 text-sm font-medium text-gray-500 border-t border-gray-100">{{ t('product.location') }}</div>
-              <div class="px-4 py-3 text-sm text-gray-900 border-t border-gray-100">{{ product.location || 'Trier, Germany' }}</div>
+              <div class="px-4 py-3 text-sm text-gray-900 border-t border-gray-100">{{ product.location || 'Demo, Locatioon' }}</div>
 
               <div class="px-4 py-3 bg-gray-50 text-sm font-bold text-gray-700 border-t border-gray-100">{{ t('product.price') }}</div>
               <div class="px-4 py-3 text-sm font-black text-gray-900 border-t border-gray-100">
