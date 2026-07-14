@@ -18,7 +18,7 @@ npm run dev
 
 - Frontend: http://localhost:5173
 - Backend: http://localhost:3000
-- Admin login: `admin@lekocom` / `admin123`
+- Admin login: `admin@leko.com` / `admin123`
 
 ## Deploy to Render (free)
 

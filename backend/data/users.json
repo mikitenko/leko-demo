@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "email": "admin@lekocom",
+    "email": "admin@leko.com",
     "password": "$2a$10$rfw6e6tCVBH.i6w64e7UAuU25kEAd/KQ94KvLoOriO.Fflr6EaW7y",
     "name": "Admin",
     "role": "SUPER_ADMIN"
