@@ -97,7 +97,7 @@
 
           <!-- CTA -->
           <a
-            href="mailto:info@leko-gmbh.de"
+            href="mailto:info@lekocom"
             class="btn-primary w-full py-3 text-base justify-center"
           >
             {{ t('product.requestInfo') }}

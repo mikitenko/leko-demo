@@ -1,4 +1,4 @@
-# LEKO GmbH — Heavy Machinery Catalog
+# LEKO — Heavy Machinery Catalog
 
 Demo project: Vue 3 + Express.js
 
@@ -18,7 +18,7 @@ npm run dev
 
 - Frontend: http://localhost:5173
 - Backend: http://localhost:3000
-- Admin login: `admin@leko-gmbh.de` / `admin123`
+- Admin login: `admin@lekocom` / `admin123`
 
 ## Deploy to Render (free)
 

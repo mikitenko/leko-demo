@@ -7,15 +7,15 @@ async function main() {
   const password = await bcrypt.hash('admin123', 10);
 
   await prisma.user.upsert({
-    where: { email: 'admin@leko-gmbh.de' },
+    where: { email: 'admin@lekocom' },
     update: {},
-    create: { email: 'admin@leko-gmbh.de', password, name: 'Admin', role: 'SUPER_ADMIN' },
+    create: { email: 'admin@lekocom', password, name: 'Admin', role: 'SUPER_ADMIN' },
   });
 
   await prisma.user.upsert({
-    where: { email: 'manager@leko-gmbh.de' },
+    where: { email: 'manager@lekocom' },
     update: {},
-    create: { email: 'manager@leko-gmbh.de', password, name: 'Manager', role: 'ADMIN' },
+    create: { email: 'manager@lekocom', password, name: 'Manager', role: 'ADMIN' },
   });
 
   const products = [

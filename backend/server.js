@@ -328,4 +328,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: err.message || 'Internal server error' });
 });
 
-app.listen(PORT, () => console.log(`🚀 Leko GmbH API running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Leko API running on http://localhost:${PORT}`));

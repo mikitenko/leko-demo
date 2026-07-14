@@ -1,7 +1,7 @@
 {
   "name": "leko-frontend",
   "version": "1.0.0",
-  "description": "Leko GmbH - Heavy Machinery Frontend",
+  "description": "Leko - Heavy Machinery Frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

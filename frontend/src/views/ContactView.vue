@@ -46,7 +46,7 @@
         </div>
         <div>
           <h3 class="font-bold text-gray-900 mb-2">{{ t('contact.email') }}</h3>
-          <a href="mailto:info@leko-gmbh.de" class="text-primary-600 hover:text-primary-700 font-medium">info@leko-gmbh.de</a>
+          <a href="mailto:info@lekocom" class="text-primary-600 hover:text-primary-700 font-medium">info@lekocom</a>
         </div>
 
         <!-- Map placeholder -->

@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "email": "admin@leko-gmbh.de",
+    "email": "admin@lekocom",
     "password": "$2a$10$rfw6e6tCVBH.i6w64e7UAuU25kEAd/KQ94KvLoOriO.Fflr6EaW7y",
     "name": "Admin",
     "role": "SUPER_ADMIN"
   },
   {
     "id": 2,
-    "email": "manager@leko-gmbh.de",
+    "email": "manager@lekocom",
     "password": "$2a$10$rfw6e6tCVBH.i6w64e7UAuU25kEAd/KQ94KvLoOriO.Fflr6EaW7y",
     "name": "Manager",
     "role": "ADMIN"
