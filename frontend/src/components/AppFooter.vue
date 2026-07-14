@@ -7,7 +7,7 @@
         <div>
           <div class="flex items-center gap-1 mb-3">
             <span class="text-xl font-black text-white">LEKO</span>
-            <span class="text-primary-400 font-black text-xl">GmbH</span>
+            <span class="text-primary-400 font-black text-xl">demo</span>
           </div>
           <p class="text-sm leading-relaxed">
             Heavy construction machinery for sale.<br>

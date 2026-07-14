@@ -34,7 +34,7 @@
       <div class="space-y-6">
         <div>
           <h3 class="font-bold text-gray-900 mb-2">{{ t('contact.address') }}</h3>
-          <p class="text-gray-600">Leko GmbH<br>Musterstraße 1<br>54290 Trier<br>Germany</p>
+          <p class="text-gray-600">Leko demo<br>Musterstraße 1<br>54290 Trier<br>Germany</p>
         </div>
         <div>
           <h3 class="font-bold text-gray-900 mb-2">{{ t('contact.workingHours') }}</h3>

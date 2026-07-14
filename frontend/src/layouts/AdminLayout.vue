@@ -11,7 +11,7 @@
     >
       <div class="p-5 border-b border-dark-700 flex items-center justify-between">
         <div>
-          <RouterLink to="/" class="text-xl font-bold text-primary-400">Leko GmbH</RouterLink>
+          <RouterLink to="/" class="text-xl font-bold text-primary-400">Leko demo</RouterLink>
           <p class="text-xs text-gray-400 mt-0.5">Admin Panel</p>
         </div>
         <button @click="sidebarOpen = false" class="lg:hidden text-gray-400 hover:text-white">

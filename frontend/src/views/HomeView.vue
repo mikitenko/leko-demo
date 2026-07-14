@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p class="text-primary-400 text-sm font-bold uppercase tracking-widest mb-2">{{ t('home.heroSubtitle') }}</p>
         <h1 class="text-4xl sm:text-5xl font-black uppercase tracking-tight mb-3 leading-tight">
-          LEKO <span class="text-primary-400">GmbH</span>
+          LEKO <span class="text-primary-400">demo</span>
         </h1>
         <p class="text-gray-300 text-lg">{{ t('home.heroDesc') }}</p>
       </div>

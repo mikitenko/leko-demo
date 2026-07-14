@@ -4,7 +4,7 @@
 
       <div class="text-center mb-8">
         <span class="text-2xl font-black text-dark">LEKO</span>
-        <span class="text-primary-500 font-black text-2xl">GmbH</span>
+        <span class="text-primary-500 font-black text-2xl">demo</span>
         <p class="text-sm text-gray-400 mt-1">Admin Panel</p>
       </div>
 

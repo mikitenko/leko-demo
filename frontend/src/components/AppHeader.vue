@@ -6,7 +6,7 @@
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center gap-1 shrink-0">
           <span class="text-xl font-black text-white tracking-tight">LEKO</span>
-          <span class="text-primary-400 font-black text-xl">GmbH</span>
+          <span class="text-primary-400 font-black text-xl">demo</span>
         </RouterLink>
 
         <!-- Desktop nav -->
